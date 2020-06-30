@@ -1,0 +1,317 @@
+/* :root {
+  --website-width: 1024px;
+  --font-stack: 'Lato', sans-serif;
+  --blue-color: #35ACD0;
+  --yellow-color: #FED36E;
+  --light-color: #fafafa;
+  --dark-color: #333;
+} */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Global Styles */
+body {
+  background-color: #fafafa;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Helper Classes */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.py-small {padding: 1.5rem 0;}
+.py-medium {padding: 2rem 0;}
+.py-large {padding: 3rem 0;}
+
+/* Header */
+.navbar {
+  background-color: #35ACD0;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Karla', sans-serif;
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.main-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.main-nav li:not(:last-child) {
+  margin-bottom: .25rem;
+}
+
+.main-nav a {
+  display: block;
+  background-color: #fff;
+  color: #35ACD0;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: .75rem;
+}
+
+.main-nav a:hover {
+  background: #FED36E;
+  color: #fff;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.avatar {
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.4rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+}
+
+.width-res {
+  width: 80%;
+  margin: 0 auto 1.5rem;
+}
+
+/* Main */
+/* Section: Portfolio */
+.portfolio {
+  background-color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card h3 {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.card p {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+/* Section: Contact */
+.contact-info,
+.skills-info {
+  text-align: center;
+}
+
+.address {
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Section: Skills */
+.skills {
+  padding-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.main-footer p {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.footer-nav {
+  display: none;
+}
+
+.top a {
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+/* Media Queries */
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  /* Helper Classes */
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Header */
+  .main-nav li {
+    display: inline-block;
+  }
+
+  .main-nav a {
+    background: none;
+    margin-left: .5rem;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  .header-content {
+    display: flex;
+    text-align: left;
+  }
+
+  .lead {
+    order: 0;
+    padding-right: 2rem;
+  }
+
+  .avatar {
+    order: 1;
+    margin: 0;
+  }
+
+  /* Main */
+  /* Section: Portfolio */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr); */
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  /* Footer */
+  .footer-nav {
+    display: flex;
+    font-weight: 900;
+  }
+
+  .footer-nav li {
+    margin-left: .25rem;
+  }
+  
+  .footer-nav a {
+    display: block;
+    color: #333;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .footer-nav a:hover {
+    opacity: .8;
+  }
+
+  .top {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Helper Classes */
+  .container {
+    padding: 0 2rem;
+    height: 100%;
+  }
+
+  /* Header */
+  .navbar {
+    padding: 0;
+    height: 70px;
+  }
+
+  .nav {
+    margin-top: .25rem;
+  }
+
+  .main-nav a {
+    padding: .5rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-items {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .main-nav {
+    width: auto;
+  }
+
+  /* Main */
+  /* Section: Portfolio */
+  .cards {
+    /* grid-template-columns: repeat(3, 1fr); */
+  }
+
+  .card {
+    flex: 0 0 calc(33% - 1rem);
+  }
+
+  .portfolio {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
